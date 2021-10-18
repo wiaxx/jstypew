@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+.base {
+    background-color: aquamarine;
+    width: 70vw;
+    height: 300px;
+    padding: 10px;
+    margin: 0 auto 5px auto;
+}
