@@ -5,7 +5,42 @@
 .base {
     background-color: aquamarine;
     width: 70vw;
-    height: 300px;
+    height: 430px;
     padding: 10px;
     margin: 0 auto 5px auto;
+    font-size: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+#txtHolder {
+    background-color: blanchedalmond;
+    margin: 0 auto 5px auto;
+    width: 70vw;
+    height: 70px;
+    text-align: center;
+    padding: 5px;
+}
+
+#txt {
+    height: 50px;
+    width: 65vw;
+    font-size: 1.5rem;
+}
+
+span {
+    margin: 3px;
+    border: 1px solid salmon;
+}
+
+.correctAns {
+    color: green;
+}
+
+.wrongAns {
+    color: red;
+}
+
+/* #sendInput {
+    display: none;
+} */
