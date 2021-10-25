@@ -80,9 +80,15 @@ document.querySelector("#txtHolder").addEventListener('submit', (e) => {
     sendSubmit();
 });
 
+// press space för button
+
+
+
 // grön och rödmarkera vid rätt och felskrivning
 
 let i = 0;
+let misspelled = 0;
+let correct = 0;
 
 function sendSubmit () {
     let txtHolder = document.querySelector("#txt").value;
@@ -91,9 +97,55 @@ function sendSubmit () {
         document.querySelector(`.a${i}`).style.color = "green";
         // newSpan.classList.add("correctAns"); //alternativ lösning för styling
         i++;
+        correct++;
+        document.querySelector(".right").innerHTML = "Correct words: " + correct;
         document.querySelector("#txtHolder").reset();
-        // lägg till clear/reset här när det är rätt
     } else {
         document.querySelector(`.a${i}`).style.color = "red";
+        misspelled++;
+        document.querySelector(".wrong").innerHTML = "Misspelled words: " + misspelled
     }
 }
+
+// one minute count down timer
+
+let seconds = 60;
+let timer;
+
+function startTimer() {
+    if (seconds < 60) {
+        document.querySelector(".timer").innerHTML = seconds
+    }
+        if (seconds > 0) {
+            seconds--;
+        } else {
+            clearInterval(timer);
+            document.querySelector(".stat").innerHTML = "WPN " + correct;
+            alert("Times up!");
+        }
+}
+
+document.querySelector("#txt").onkeypress = function() {
+    if (!timer) {
+        timer = window.setInterval(function() {
+            startTimer();
+        }, 1000);
+    }
+}
+
+document.querySelector(".timer").innerHTML = "Timer: 1 min"
+
+
+
+/* 
+PRIO
+- byta ord på space, space triggar funktionen
+- accuracy, hur många % rätt/fel
+- en mins timer, wpn
+- declarera document.querySel som variable högst upp och kalla på dessa
+
+- fetcha ord och slumpa
+- välj vilket språk skriva på
+- leaderboard, input namn innan start. Backend håller infon
+- 
+*/
