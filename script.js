@@ -1,5 +1,4 @@
 // 1. skapa div som displayar ord från en array
-
 // array innehållande ord för typewriter
 
 let words = [
@@ -52,7 +51,7 @@ let words = [
     "Lettuce"
 ]
 
-// display orden från arrayen, nytt displaysätt nedan
+// display orden från arrayen, nytt displaysätt nedan, rad 60
 
 // document.querySelector(".base").innerHTML = words.join(" ");
 
@@ -82,7 +81,12 @@ document.querySelector("#txtHolder").addEventListener('submit', (e) => {
 
 // press space för button
 
-
+// document.querySelector("#txt").addEventListener('keypress', function(e) {
+//     if (e.keyCode === 32) {
+//         sendSubmit();
+//         console.log("work");
+//     }
+// });
 
 // grön och rödmarkera vid rätt och felskrivning
 
@@ -114,7 +118,7 @@ let timer;
 
 function startTimer() {
     if (seconds < 60) {
-        document.querySelector(".timer").innerHTML = seconds
+        document.querySelector(".timer").innerHTML = "Tid kvar: " + seconds +"s";
     }
         if (seconds > 0) {
             seconds--;
@@ -139,9 +143,9 @@ document.querySelector(".timer").innerHTML = "Timer: 1 min"
 
 /* 
 PRIO
-- byta ord på space, space triggar funktionen
-- accuracy, hur många % rätt/fel
-- en mins timer, wpn
+- byta ord på space, space triggar funktionen - PÅBÖRJAD
+- accuracy, hur många % rätt/fel - PÅBÖRJAD
+- en mins timer, wpn - PÅBÖRJAD
 - declarera document.querySel som variable högst upp och kalla på dessa
 
 - fetcha ord och slumpa
