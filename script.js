@@ -1,7 +1,4 @@
-// 1. skapa div som displayar ord från en array
-// array innehållande ord för typewriter
-
-let words = [
+const words = [
     "Apple",
     "Watermelon",
     "Orange",
@@ -51,12 +48,8 @@ let words = [
     "Lettuce"
 ]
 
-// display orden från arrayen, nytt displaysätt nedan, rad 60
-
 // document.querySelector(".base").innerHTML = words.join(" ");
-
 // displaya varje enskilt ord i en span
-
 for (let i = 0; i < words.length; i++) {
     var newSpan = document.createElement("span")
     document.querySelector(".base").appendChild(newSpan);
@@ -89,7 +82,6 @@ document.querySelector("#txtHolder").addEventListener('submit', (e) => {
 // });
 
 // grön och rödmarkera vid rätt och felskrivning
-
 let i = 0;
 let misspelled = 0;
 let correct = 0;
@@ -112,7 +104,6 @@ function sendSubmit () {
 }
 
 // one minute count down timer
-
 let seconds = 60;
 let timer;
 
@@ -138,18 +129,3 @@ document.querySelector("#txt").onkeypress = function() {
 }
 
 document.querySelector(".timer").innerHTML = "Timer: 1 min"
-
-
-
-/* 
-PRIO
-- byta ord på space, space triggar funktionen - PÅBÖRJAD
-- accuracy, hur många % rätt/fel - PÅBÖRJAD
-- en mins timer, wpn - PÅBÖRJAD
-- declarera document.querySel som variable högst upp och kalla på dessa
-
-- fetcha ord och slumpa
-- välj vilket språk skriva på
-- leaderboard, input namn innan start. Backend håller infon
-- 
-*/
